@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="white_95">#f2ffffff</color>
+    <color name="white_90">#e6ffffff</color>
+    <color name="white_85">#d9ffffff</color>
+    <color name="white_80">#ccffffff</color>
+    <color name="white_75">#bfffffff</color>
+    <color name="white_70">#b3ffffff</color>
+    <color name="white_65">#a6ffffff</color>
+    <color name="white_60">#99ffffff</color>
+    <color name="white_55">#8cffffff</color>
+    <color name="white_50">#80ffffff</color>
+    <color name="white_45">#73ffffff</color>
+    <color name="white_40">#66ffffff</color>
+    <color name="white_35">#59ffffff</color>
+    <color name="white_30">#4dffffff</color>
+    <color name="white_25">#40ffffff</color>
+    <color name="white_20">#33ffffff</color>
+    <color name="white_15">#26ffffff</color>
+    <color name="white_10">#1affffff</color>
+    <color name="white_5">#0dffffff</color>
+
+    <color name="black">#000000</color>
+    <color name="black_95">#f2000000</color>
+    <color name="black_90">#e6000000</color>
+    <color name="black_85">#d9000000</color>
+    <color name="black_80">#cc000000</color>
+    <color name="black_75">#bf000000</color>
+    <color name="black_70">#b3000000</color>
+    <color name="black_65">#a6000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_55">#8c000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_45">#73000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_35">#59000000</color>
+    <color name="black_30">#4d000000</color>
+    <color name="black_25">#40000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_15">#26000000</color>
+    <color name="black_10">#1a000000</color>
+    <color name="black_5">#0d000000</color>
+
+
+</resources>

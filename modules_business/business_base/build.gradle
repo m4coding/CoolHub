@@ -1,0 +1,51 @@
+apply from: rootProject.file('cc-settings.gradle')
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //使用矢量drawable支持
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //kotlin支持
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //dialog
+    api (rootProject.ext.dependencies["flyco-dialog"])
+
+    //ConstraintLayout
+    api rootProject.ext.dependencies["constraint-layout"]
+
+    addComponent 'api'
+    implementation project(':base')
+    implementation project(':widgets')
+    implementation rootProject.ext.dependencies['agentweb']
+    implementation rootProject.ext.dependencies["autosize"]
+    api rootProject.ext.dependencies["smart-refresh-layout"]
+    api rootProject.ext.dependencies["smart-refresh-layout-header"]
+    //RecyclerView Adapter
+    api (rootProject.ext.dependencies["recyclerview-adapter"])
+    api (rootProject.ext.dependencies["cardview-v7"])
+    api (rootProject.ext.dependencies["recyclerview-v7"])
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/selector_click_effect"
+    android:id="@+id/setting_cd"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/px_30"
+        android:paddingBottom="@dimen/px_30"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/setting_iv_icon"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_marginStart="@dimen/px_20"
+            android:layout_marginLeft="@dimen/px_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@color/accent"/>
+
+        <TextView
+            android:id="@+id/setting_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_20"
+            android:layout_marginLeft="@dimen/px_20"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/px_text_30"
+            app:layout_constraintBottom_toTopOf="@id/setting_tv_sub_title"
+            app:layout_constraintStart_toEndOf="@id/setting_iv_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_goneMarginStart="@dimen/px_20"
+            tools:text="标题" />
+
+        <TextView
+            android:id="@+id/setting_tv_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/px_text_25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/setting_tv_title"
+            app:layout_constraintTop_toBottomOf="@id/setting_tv_title"
+            tools:text="子标题" />
+
+        <TextView
+            android:id="@+id/setting_tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/px_10"
+            android:layout_marginRight="@dimen/px_10"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/px_text_25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/setting_iv_go"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginEnd="@dimen/px_20"
+            tools:text="内容-值" />
+
+        <ImageView
+            android:id="@+id/setting_iv_go"
+            android:layout_width="@dimen/px_28"
+            android:layout_height="@dimen/px_28"
+            android:layout_marginEnd="@dimen/px_20"
+            android:layout_marginRight="@dimen/px_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/vc_ic_right_arrow"/>
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

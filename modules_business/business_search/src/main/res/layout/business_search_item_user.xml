@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/px_10"
+    android:layout_marginRight="@dimen/px_10"
+    android:foreground="@drawable/selector_click_effect"
+    app:cardCornerRadius="@dimen/px_12"
+    app:cardElevation="@dimen/px_3"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/px_20">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/business_search_user_iv_avatar"
+            android:layout_width="@dimen/px_65"
+            android:layout_height="@dimen/px_65"
+            android:layout_marginStart="@dimen/px_10"
+            android:layout_marginLeft="@dimen/px_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@color/accent" />
+
+        <TextView
+            android:id="@+id/business_search_user_tv_user_name"
+            android:layout_width="@dimen/px_550"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_20"
+            android:layout_marginLeft="@dimen/px_20"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/px_text_30"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/business_search_user_iv_avatar"
+            app:layout_constraintStart_toEndOf="@id/business_search_user_iv_avatar"
+            app:layout_constraintTop_toTopOf="@id/business_search_user_iv_avatar"
+            tools:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

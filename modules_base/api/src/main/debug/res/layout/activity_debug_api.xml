@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/fb_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flexDirection="row"
+            app:flexWrap="wrap">
+
+            <Button
+                android:id="@+id/bt_test_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试登录" />
+
+            <Button
+                android:id="@+id/bt_test_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录退出" />
+
+            <Button
+                android:id="@+id/bt_read_login_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="读取数据库登录信息" />
+
+            <Button
+                android:id="@+id/bt_test_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试获取个人信息" />
+
+            <Button
+                android:id="@+id/bt_test_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试获取用户信息" />
+
+            <Button
+                android:id="@+id/bt_test_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动态" />
+
+            <Button
+                android:id="@+id/bt_test_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐" />
+
+            <Button
+                android:id="@+id/bt_test_trend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="趋势" />
+            <Button
+                android:id="@+id/bt_test_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="星标" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+        <TextView
+            android:id="@+id/tv_response"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/fb_layout"
+            tools:text="响应内容测试" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

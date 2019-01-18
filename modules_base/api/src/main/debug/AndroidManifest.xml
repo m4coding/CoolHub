@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.m4coding.coolhub.api" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".test.DebugApiApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="api测试"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- 全局配置-->
+        <meta-data android:name="com.m4coding.coolhub.api.test.AppGlobalConfig"
+            android:value="ConfigModule"/>
+
+        <activity android:name=".test.DebugApiActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

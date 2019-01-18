@@ -1,0 +1,10 @@
+<resources>
+    <string name="business_search_search">搜索</string>
+    <string name="business_search_search_history">搜索历史</string>
+    <string name="business_search_delete_history">确定要删除搜索历史？</string>
+    <string name="business_search_repository">仓库</string>
+    <string name="business_search_user">用户</string>
+    <string name="business_search_all_language">全部语言</string>
+    <string name="business_search_input_empty">输入为空</string>
+
+</resources>

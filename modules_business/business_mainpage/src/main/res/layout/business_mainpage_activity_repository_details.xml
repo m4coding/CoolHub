@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m4coding.coolhub.widgets.MultiStateView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/business_mainpage_repository_details_state_view"
+    app:msv_errorView="@layout/layout_load_error"
+    app:msv_loadingView="@layout/layout_loading"
+    app:msv_viewState="loading"
+    tools:msv_viewState="content">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_360"
+            android:id="@+id/business_mainpage_repository_details_header_cl_bg">
+            <ImageView
+                android:id="@+id/business_mainpage_repository_details_header_iv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_40"
+                app:layout_constraintTop_toTopOf="@id/business_mainpage_repository_details_header_iv_bg"
+                app:layout_constraintBottom_toBottomOf="@id/business_mainpage_repository_details_header_iv_bg"/>
+        </android.support.constraint.ConstraintLayout>
+        <com.m4coding.coolhub.widgets.headervp.HeaderViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/business_mainpage_repository_details_header_pager">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/business_mainpage_repository_details_fl_header_container" />
+            <com.m4coding.coolhub.widgets.powerfullayout.PowerfulFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/business_mainpage_repository_details_top_card"
+                app:power_bottomDividerHeight="@dimen/px_3"
+                app:power_bottomDividerColor="@color/indicator_line_color">
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_90"
+                    android:background="@color/white"
+                    android:id="@+id/business_mainpage_repository_details_top_indicator"/>
+            </com.m4coding.coolhub.widgets.powerfullayout.PowerfulFrameLayout>
+            <com.m4coding.coolhub.widgets.CustomViewPager
+                android:id="@+id/business_mainpage_repository_details_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <!-- 垫高一些，避免底部tab遮挡-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_100" />
+        </com.m4coding.coolhub.widgets.headervp.HeaderViewPager>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/business_mainpage_repository_details_fl_title_container"
+            app:layout_constraintTop_toTopOf="parent">
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/business_mainpage_repository_details_fl_bottom_tab_container"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
+</com.m4coding.coolhub.widgets.MultiStateView>

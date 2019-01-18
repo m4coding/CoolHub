@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="android:icon">@color/bar_title_color</item>
+        <item name="android:divider">@color/divider_color</item>
+
+        <!--定义主题按钮-->
+        <item name="android:buttonStyle">@style/AppThemeButton</item>
+        <!--  <item name="android:checkboxStyle">@style/AppThemeCheckBox</item>-->
+        <!-- 添加buttonStyle避免4.0 button默认样式设置失效 -->
+        <item name="buttonStyle">@style/AppThemeButton</item>
+        <!--  <item name="checkboxStyle">@style/AppThemeCheckBox</item>-->
+
+        <!--窗体切换动画-->
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="BaseTheme">
+    </style>
+
+    <style name="AppThemeButton" parent="@style/Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/selector_bt_bg</item>
+        <item name="android:textColor">@drawable/selector_bt_text</item>
+        <!--避免Button默认英文大写显示-->
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--    <style name="AppThemeCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+            <item name="android:button">@drawable/icon_checkbox</item>
+        </style>-->
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <!-- 新Activity 进入 -->
+        <item name="android:activityOpenEnterAnimation">@anim/anim_activity_enter</item>
+        <!-- 旧Activity退出 -->
+        <item name="android:activityOpenExitAnimation">@anim/anim_activity_exit</item>
+
+        <!--例如返回键操作-->
+        <!-- 新Activity退出 -->
+        <item name="android:activityCloseEnterAnimation">@anim/anim_activity_back_enter</item>
+        <!-- 旧Activity进入 -->
+        <item name="android:activityCloseExitAnimation">@anim/anim_activity_back_exit</item>
+    </style>
+</resources>

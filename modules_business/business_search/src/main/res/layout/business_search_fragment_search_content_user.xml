@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m4coding.coolhub.widgets.MultiStateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/business_search_user_state_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:msv_errorView="@layout/layout_load_error"
+    app:msv_loadingView="@layout/layout_loading"
+    app:msv_viewState="loading"
+    tools:msv_viewState="content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/business_search_content_top_cl_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/business_search_content_top_tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_20"
+                android:layout_marginLeft="@dimen/px_20"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/px_text_30"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/business_search_content_iv_type_arrow"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Best match" />
+
+            <ImageView
+                android:id="@+id/business_search_content_iv_type_arrow"
+                android:layout_width="@dimen/px_25"
+                android:layout_height="@dimen/px_25"
+                android:layout_marginStart="@dimen/px_10"
+                android:layout_marginLeft="@dimen/px_10"
+                app:layout_constraintBottom_toBottomOf="@id/business_search_content_top_tv_type"
+                app:layout_constraintStart_toEndOf="@id/business_search_content_top_tv_type"
+                app:layout_constraintTop_toTopOf="@id/business_search_content_top_tv_type"
+                app:srcCompat="@drawable/vc_ic_arrow_down" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_2"
+                android:background="@color/indicator_line_color"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <com.m4coding.coolhub.business.base.widgets.BusinessRefreshLayout
+            android:id="@+id/business_search_user_sm_refresh_l"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/common_f5f5f5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/business_search_content_top_cl_type"
+            app:layout_constraintVertical_weight="1"
+            app:srlEnableOverScrollBounce="false"
+            app:srlEnablePreviewInEditMode="true">
+
+            <com.m4coding.coolhub.business.base.widgets.BusinessRefreshHeader
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/business_search_user_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.m4coding.coolhub.business.base.widgets.BusinessRefreshLayout>
+    </android.support.constraint.ConstraintLayout>
+</com.m4coding.coolhub.widgets.MultiStateView>

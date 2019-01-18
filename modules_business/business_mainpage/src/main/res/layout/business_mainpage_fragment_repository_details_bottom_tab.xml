@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m4coding.coolhub.widgets.powerfullayout.PowerfulFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_100"
+    app:power_topDividerColor="@color/indicator_line_color"
+    app:power_topDividerHeight="@dimen/px_5">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/business_mainpage_repo_details_bottom_tab_ll_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/selector_click_effect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/business_mainpage_repo_details_bottom_tab_ll_watch"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/business_mainpage_repo_details_bottom_tab_iv_star"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="@dimen/px_30"
+                android:tint="@color/secondary_text"
+                app:srcCompat="@drawable/repo_vc_ic_star" />
+
+            <TextView
+                android:id="@+id/business_mainpage_repo_details_bottom_tab_tv_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_5"
+                android:layout_marginLeft="@dimen/px_5"
+                android:gravity="center"
+                android:text="@string/business_mainpage_repo_do_star"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/px_text_25" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/business_mainpage_repo_details_bottom_tab_ll_watch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/selector_click_effect"
+            app:layout_constraintBottom_toBottomOf="@id/business_mainpage_repo_details_bottom_tab_ll_star"
+            app:layout_constraintEnd_toStartOf="@id/business_mainpage_repo_details_bottom_tab_ll_branch"
+            app:layout_constraintStart_toEndOf="@id/business_mainpage_repo_details_bottom_tab_ll_star"
+            app:layout_constraintTop_toTopOf="@id/business_mainpage_repo_details_bottom_tab_ll_star">
+
+            <ImageView
+                android:id="@+id/business_mainpage_repo_details_bottom_tab_iv_watch"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="@dimen/px_30"
+                android:tint="@color/secondary_text"
+                app:srcCompat="@drawable/repo_vc_ic_watch" />
+
+            <TextView
+                android:id="@+id/business_mainpage_repo_details_bottom_tab_tv_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_5"
+                android:layout_marginLeft="@dimen/px_5"
+                android:gravity="center"
+                android:text="@string/business_mainpage_repo_do_watch"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/px_text_25" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/business_mainpage_repo_details_bottom_tab_ll_branch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/selector_click_effect"
+            app:layout_constraintBottom_toBottomOf="@id/business_mainpage_repo_details_bottom_tab_ll_watch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/business_mainpage_repo_details_bottom_tab_ll_watch"
+            app:layout_constraintTop_toTopOf="@id/business_mainpage_repo_details_bottom_tab_ll_watch">
+
+            <ImageView
+                android:id="@+id/business_mainpage_repo_details_bottom_tab_iv_branch"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="@dimen/px_30"
+                android:tint="@color/primary_text"
+                app:srcCompat="@drawable/repo_vc_ic_branch" />
+
+            <TextView
+                android:id="@+id/business_mainpage_repo_details_bottom_tab_tv_branch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_5"
+                android:layout_marginLeft="@dimen/px_5"
+                android:maxEms="12"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/px_text_25"
+                tools:text="master" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</com.m4coding.coolhub.widgets.powerfullayout.PowerfulFrameLayout>

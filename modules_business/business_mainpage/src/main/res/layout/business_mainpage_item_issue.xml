@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/px_10"
+    android:layout_marginRight="@dimen/px_10"
+    android:foreground="@drawable/selector_click_effect"
+    app:cardCornerRadius="@dimen/px_12"
+    app:cardElevation="@dimen/px_3"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/px_20">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/business_mainpage_issue_iv_avatar"
+            android:layout_width="@dimen/px_55"
+            android:layout_height="@dimen/px_55"
+            android:layout_marginLeft="@dimen/px_10"
+            app:layout_constraintBottom_toTopOf="@id/business_mainpage_issue_tv_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:src="@color/accent" />
+
+        <TextView
+            android:id="@+id/business_mainpage_issue_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_20"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/px_text_25"
+            app:layout_constraintBottom_toBottomOf="@id/business_mainpage_issue_iv_avatar"
+            app:layout_constraintStart_toEndOf="@id/business_mainpage_issue_iv_avatar"
+            app:layout_constraintTop_toTopOf="@id/business_mainpage_issue_iv_avatar"
+            tools:text="m4coding" />
+
+        <TextView
+            android:id="@+id/business_mainpage_issue_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/px_10"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/px_text_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/business_mainpage_issue_iv_avatar"
+            tools:text="25天前" />
+
+        <TextView
+            android:id="@+id/business_mainpage_issue_tv_content"
+            android:layout_width="@dimen/px_600"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_15"
+            android:ellipsize="end"
+            android:maxLines="6"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/px_text_30"
+            app:layout_constraintBottom_toBottomOf="@id/business_mainpage_issue_tv_number"
+            app:layout_constraintStart_toStartOf="@id/business_mainpage_issue_iv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/business_mainpage_issue_iv_avatar"
+            tools:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+
+        <TextView
+            android:id="@+id/business_mainpage_issue_tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_15"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/px_text_25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/business_mainpage_issue_iv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/business_mainpage_issue_tv_content"
+            tools:text="#1001" />
+
+        <TextView
+            android:id="@+id/business_mainpage_issue_tv_comment_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_25"
+            android:layout_marginLeft="@dimen/px_25"
+            android:drawableStart="@drawable/repo_compat_vc_ic_issue_comment"
+            android:drawableLeft="@drawable/repo_compat_vc_ic_issue_comment"
+            android:drawablePadding="@dimen/px_4"
+            android:gravity="center"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/px_text_25"
+            app:layout_constraintBottom_toBottomOf="@id/business_mainpage_issue_tv_number"
+            app:layout_constraintStart_toEndOf="@id/business_mainpage_issue_tv_number"
+            app:layout_constraintTop_toTopOf="@id/business_mainpage_issue_tv_number"
+            tools:text="1000" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

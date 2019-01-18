@@ -1,0 +1,29 @@
+<resources>
+    <string name="business_base_load_error">加载失败，请点击重试</string>
+    <string name="business_base_load_empty">暂无内容</string>
+    <string name="business_base_network_not_good">网络不给力</string>
+
+    <string name="just_now">刚刚</string>
+    <string name="seconds_ago">秒前</string>
+    <string name="minutes_ago">分钟前</string>
+    <string name="hours_ago">小时前</string>
+    <string name="days_ago">天前</string>
+
+    <string name="many_stars_in_day">%d星标今天</string>
+    <string name="many_stars_in_this_week">%d星标这周</string>
+    <string name="many_stars_in_this_month">%d星标这月</string>
+
+    <string name="now_refresh">正在刷新</string>
+
+    <string name="ten_thousand">%sW</string>
+
+    <string name="share">分享</string>
+    <string name="copy_url">复制链接</string>
+    <string name="open_in_browser">在浏览器中打开</string>
+
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="search_want_content">搜索你想要的内容</string>
+
+</resources>

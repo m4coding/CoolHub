@@ -1,0 +1,10 @@
+<resources>
+    <string name="business_search_search">search</string>
+    <string name="business_search_search_history">Search History</string>
+    <string name="business_search_delete_history">Are you sure you want to delete the search history?</string>
+    <string name="business_search_repository">Repository</string>
+    <string name="business_search_user">User</string>
+    <string name="business_search_all_language">All</string>
+    <string name="business_search_input_empty">The input is empty</string>
+
+</resources>

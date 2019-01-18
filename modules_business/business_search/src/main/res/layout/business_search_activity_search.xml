@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/business_search_cl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_90"
+        android:background="@color/primary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.m4coding.coolhub.widgets.roundlayout.RoundEditText
+            android:id="@+id/business_search_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_marginRight="@dimen/px_20"
+            android:background="@null"
+            android:color="@color/primary_text"
+            android:gravity="center_vertical"
+            android:hint="@string/search_want_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:paddingStart="@dimen/px_60"
+            android:paddingLeft="@dimen/px_60"
+            android:paddingTop="@dimen/px_10"
+            android:paddingBottom="@dimen/px_10"
+            android:textColorHint="@color/text_gray"
+            android:textSize="@dimen/px_text_30"
+            android:imeOptions="actionSearch"
+            app:bgRadius="@dimen/px_100"
+            app:bgSolidColor="#f0f0f0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/busniess_search_tv_search"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/business_search_iv_icon"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_marginStart="@dimen/px_15"
+            android:layout_marginLeft="@dimen/px_15"
+            app:layout_constraintBottom_toBottomOf="@id/business_search_et"
+            app:layout_constraintStart_toStartOf="@id/business_search_et"
+            app:layout_constraintTop_toTopOf="@id/business_search_et"
+            app:srcCompat="@drawable/vc_ic_search" />
+
+        <ImageView
+            android:id="@+id/business_search_iv_cancel"
+            android:layout_width="@dimen/px_60"
+            android:layout_height="@dimen/px_60"
+            android:layout_marginEnd="@dimen/px_10"
+            android:layout_marginRight="@dimen/px_10"
+            android:padding="@dimen/px_20"
+            android:tint="@color/accent"
+            app:layout_constraintBottom_toBottomOf="@id/business_search_et"
+            app:layout_constraintEnd_toEndOf="@id/business_search_et"
+            app:layout_constraintTop_toTopOf="@id/business_search_et"
+            app:srcCompat="@drawable/vc_ic_close" />
+
+        <TextView
+            android:id="@+id/busniess_search_tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/px_20"
+            android:layout_marginRight="@dimen/px_20"
+            android:text="@string/business_search_search"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_text_35"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/business_search_et"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/business_search_fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/business_search_cl_top"
+        app:layout_constraintVertical_weight="1"
+        tools:background="@color/black_50" />
+</android.support.constraint.ConstraintLayout>

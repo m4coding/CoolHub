@@ -1,0 +1,68 @@
+apply from: rootProject.file('cc-settings.gradle')
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: rootProject.file('github-config.gradle')
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+//GreenDao数据库配置
+greendao {
+    //数据库版本
+    schemaVersion 1
+    //产生的源码文件所在包名
+    daoPackage 'com.m4coding.coolhub.api.greendao.gen'
+    //产生的源码所在路径
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    testImplementation (rootProject.ext.dependencies["retrofit-converter-gson"])
+    testImplementation (rootProject.ext.dependencies["retrofit-adapter-rxjava"])
+    testImplementation (rootProject.ext.dependencies["retrofit"])
+    testImplementation rootProject.ext.dependencies["rxjava"]
+    testImplementation (rootProject.ext.dependencies["rxandroid"])
+
+    implementation (rootProject.ext.dependencies["appcompat-v7"])
+
+    implementation (rootProject.ext.dependencies["retrofit"])
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation (rootProject.ext.dependencies["rxandroid"])
+    implementation (rootProject.ext.dependencies["okhttp3"])
+    implementation (rootProject.ext.dependencies["gson"])
+    implementation (rootProject.ext.dependencies["greendao"])
+    implementation (rootProject.ext.dependencies["jsoup"])
+    api (rootProject.ext.dependencies["persistent-cookie-jar"])
+    implementation project(':base')
+
+    if (runAsApp) {
+        implementation (rootProject.ext.dependencies["constraint-layout"])
+        implementation (rootProject.ext.dependencies["flexbox-layout"])
+    }
+}

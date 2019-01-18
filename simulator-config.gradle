@@ -1,0 +1,38 @@
+/**
+ * 适配模拟器的gradle配置
+ */
+
+def getLogTag(String log) {
+    def TAG = "simulator-config.gradle"
+    return TAG + ": " + log
+}
+
+def isSimulator = IS_SIMULATOR.toBoolean()
+
+android {
+    defaultConfig {
+        ndk {
+            //设置支持的SO库架构
+            if (isSimulator) {
+                project.logger.log(LogLevel.ERROR,   getLogTag("support simulator"))
+                abiFilters 'armeabi-v7a' , 'x86','x86_64'//, 'arm64-v8a'
+            } else {
+                project.logger.log(LogLevel.ERROR,   getLogTag("don't support simulator"))
+                abiFilters 'armeabi-v7a'// ,'x86','x86_64', 'arm64-v8a'
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            if (isSimulator) {
+                def simulatorJniLibs = rootProject.file('simulator/jniLibs').path
+                jniLibs.srcDirs = ['src/main/jniLibs', simulatorJniLibs]
+            } else {
+                jniLibs.srcDirs = ['src/main/jniLibs']
+            }
+        }
+    }
+
+    //getLogTag(android.sourceSets.main.jniLibs)
+}

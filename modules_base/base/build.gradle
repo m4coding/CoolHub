@@ -1,0 +1,91 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    //support
+    api (rootProject.ext.dependencies["support-v4"]){
+        exclude module: 'support-annotations'
+    }
+    api (rootProject.ext.dependencies["appcompat-v7"]){
+        exclude module: 'support-annotations'
+        exclude module: 'support-v4'
+    }
+
+    //rx
+    api rootProject.ext.dependencies["rxjava"]
+    api (rootProject.ext.dependencies["rxandroid"]){
+        exclude module: 'rxjava'
+    }
+
+//    api (rootProject.ext.dependencies["rxcache-jolyglot-gson"]){
+//        exclude module: 'gson'
+//    }
+
+    api (rootProject.ext.dependencies["rxlifecycle"]){
+        exclude module: 'rxjava'
+    }
+
+    api (rootProject.ext.dependencies["rxlifecycle-components"]){
+        exclude module: 'support-v4'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-annotations'
+        exclude module: 'rxjava'
+        exclude module: 'rxandroid'
+    }
+
+    api rootProject.ext.dependencies["rxpermissions"]
+
+    //network
+    api (rootProject.ext.dependencies["retrofit"]){
+        exclude module: 'okhttp'
+    }
+    api (rootProject.ext.dependencies["retrofit-converter-gson"]){
+        exclude module: 'gson'
+    }
+    api (rootProject.ext.dependencies["retrofit-adapter-rxjava"]){
+        exclude module: 'rxjava'
+    }
+    api rootProject.ext.dependencies["okhttp3"]
+    api rootProject.ext.dependencies["rxerrorhandler"]
+
+    //glide  [配置链接：https://muyangmin.github.io/glide-docs-cn/doc/download-setup.html]
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    //引入 OkHttp3 集成库，为了glide网路层使用okhttp3
+    implementation rootProject.ext.dependencies["glide-okhttp3"]
+
+    //tools
+    compileOnly rootProject.ext.dependencies["javax.annotation"]
+    api rootProject.ext.dependencies["androideventbus"]
+    api rootProject.ext.dependencies["gson"]
+
+    implementation rootProject.ext.dependencies["multidex"]
+
+    //test
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation(rootProject.ext.dependencies["espresso"]){
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+}

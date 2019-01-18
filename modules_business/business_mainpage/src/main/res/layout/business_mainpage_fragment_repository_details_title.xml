@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/business_mainpage_repository_details_title_cl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:id="@+id/business_mainpage_repository_details_title_back_cl"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/business_mainpage_repository_details_title_tv_name"
+            android:layout_width="@dimen/px_450"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_text_30"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="仓库名称" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/business_mainpage_repository_details_title_iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="@dimen/px_28"
+        android:layout_marginStart="@dimen/px_28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/vc_ic_back"/>
+
+    <ImageView
+        android:id="@+id/business_mainpage_repository_details_title_iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginRight="@dimen/px_28"
+        android:layout_marginEnd="@dimen/px_28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/vc_ic_more"/>
+</android.support.constraint.ConstraintLayout>

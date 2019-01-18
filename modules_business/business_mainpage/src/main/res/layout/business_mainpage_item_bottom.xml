@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/selector_click_effect">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/px_10"
+        android:paddingTop="@dimen/px_10"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="@dimen/px_40"
+            android:layout_height="@dimen/px_40"
+            android:id="@+id/business_mainpage_bottom_iv"
+            app:srcCompat="@drawable/business_mainpage_vc_ic_mainpage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <com.m4coding.coolhub.widgets.BorderTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/px_text_20"
+            android:id="@+id/business_mainpage_bottom_text"
+            app:textNormalTextColor="@color/text_gray"
+            app:textSelectedTextColor="@color/accent"
+            android:duplicateParentState="true"
+            android:layout_marginTop="@dimen/px_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/business_mainpage_bottom_iv"
+            tools:text="首页"/>
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

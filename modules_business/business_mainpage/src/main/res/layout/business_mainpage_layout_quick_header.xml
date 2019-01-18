@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_90"
+    android:background="@color/primary">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/px_49"
+        android:layout_height="@dimen/px_49"
+        android:id="@+id/business_mainpage_quick_iv_avatar"
+        android:layout_marginLeft="@dimen/px_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:civ_border_width="@dimen/px_1"
+        app:civ_border_color="@color/white"
+        android:src="@color/text_gray"/>
+    <com.m4coding.coolhub.widgets.roundlayout.RoundLinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/px_20"
+        android:layout_marginLeft="@dimen/px_20"
+        android:paddingLeft="@dimen/px_20"
+        android:paddingTop="@dimen/px_12"
+        android:paddingBottom="@dimen/px_12"
+        android:id="@+id/business_mainpage_quick_rl_search"
+        app:bgSolidColor="#f0f0f0"
+        app:bgRadius="@dimen/px_100"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/business_mainpage_quick_iv_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            app:srcCompat="@drawable/vc_ic_search"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/px_text_25"
+            android:id="@+id/business_mainpage_quick_search_tv"
+            android:layout_marginLeft="@dimen/px_15"
+            android:text="@string/search_want_content" />
+    </com.m4coding.coolhub.widgets.roundlayout.RoundLinearLayout>
+</android.support.constraint.ConstraintLayout>

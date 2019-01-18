@@ -1,0 +1,30 @@
+<resources>
+    <string name="business_base_load_error">Loading failed, click retry</string>
+    <string name="business_base_load_empty">No content</string>
+    <string name="business_base_network_not_good">Network failure</string>
+
+    <string name="just_now">just now</string>
+    <string name="seconds_ago">seconds ago</string>
+    <string name="minutes_ago">minutes ago</string>
+    <string name="hours_ago">hours ago</string>
+    <string name="days_ago">days ago</string>
+
+    <string name="many_stars_in_day">%d stars day</string>
+    <string name="many_stars_in_this_week">%d stars this week</string>
+    <string name="many_stars_in_this_month">%d starts this month</string>
+
+    <string name="now_refresh">refreshing</string>
+
+    <string name="ten_thousand">%s tenThousand</string>
+
+    <string name="share">Share</string>
+    <string name="copy_url">Copy url</string>
+    <string name="open_in_browser">Open in browser</string>
+
+
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="search_want_content">search for what you want</string>
+
+</resources>

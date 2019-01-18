@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.m4coding.coolhub.business.mainpage" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application>
+        <activity android:name="com.m4coding.coolhub.business.mainpage.MainPageActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.m4coding.coolhub.business.mainpage.modules.details.ui.activity.UserDetailsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.m4coding.coolhub.business.mainpage.modules.details.ui.activity.RepositoryListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.m4coding.coolhub.business.mainpage.modules.details.ui.activity.DataListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.m4coding.coolhub.business.mainpage.modules.details.ui.activity.RepositoryDetailsActivity"
+        android:screenOrientation="portrait"/>
+
+        <activity android:name="com.m4coding.coolhub.business.mainpage.modules.details.ui.activity.CodeReaderActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".modules.setting.ui.activity.SettingActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

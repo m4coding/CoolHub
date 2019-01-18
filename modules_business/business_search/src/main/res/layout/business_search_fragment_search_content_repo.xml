@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m4coding.coolhub.widgets.MultiStateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/business_search_repo_state_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:msv_errorView="@layout/layout_load_error"
+    app:msv_loadingView="@layout/layout_loading"
+    app:msv_viewState="loading"
+    tools:msv_viewState="content">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80"
+            android:id="@+id/business_search_content_top_cl_type"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/business_search_content_repo_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/business_search_content_top_tv_type"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/px_text_30"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/business_search_content_iv_type_arrow"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                tools:text="Best match"/>
+            <ImageView
+                android:layout_width="@dimen/px_25"
+                android:layout_height="@dimen/px_25"
+                android:id="@+id/business_search_content_iv_type_arrow"
+                android:layout_marginStart="@dimen/px_10"
+                android:layout_marginLeft="@dimen/px_10"
+                app:srcCompat="@drawable/vc_ic_arrow_down"
+                app:layout_constraintTop_toTopOf="@id/business_search_content_top_tv_type"
+                app:layout_constraintBottom_toBottomOf="@id/business_search_content_top_tv_type"
+                app:layout_constraintStart_toEndOf="@id/business_search_content_top_tv_type"
+                app:layout_constraintEnd_toStartOf="@id/business_search_content_repo_guideline"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/px_text_30"
+                android:gravity="center"
+                android:id="@+id/business_search_content_top_tv_language"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/business_search_content_repo_guideline"
+                app:layout_constraintEnd_toStartOf="@id/business_search_content_iv_language_arrow"
+                tools:text="全部语言"/>
+
+            <ImageView
+                android:id="@+id/business_search_content_iv_language_arrow"
+                android:layout_width="@dimen/px_25"
+                android:layout_height="@dimen/px_25"
+                android:layout_marginStart="@dimen/px_10"
+                android:layout_marginLeft="@dimen/px_10"
+                app:layout_constraintTop_toTopOf="@id/business_search_content_top_tv_language"
+                app:layout_constraintBottom_toBottomOf="@id/business_search_content_top_tv_language"
+                app:layout_constraintStart_toEndOf="@id/business_search_content_top_tv_language"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/vc_ic_arrow_down" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_2"
+                android:background="@color/indicator_line_color"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <com.m4coding.coolhub.business.base.widgets.BusinessRefreshLayout
+            android:id="@+id/business_search_repo_sm_refresh_l"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/common_f5f5f5"
+            app:srlEnableOverScrollBounce="false"
+            app:srlEnablePreviewInEditMode="true"
+            app:layout_constraintVertical_weight="1"
+            app:layout_constraintTop_toBottomOf="@id/business_search_content_top_cl_type"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.m4coding.coolhub.business.base.widgets.BusinessRefreshHeader
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/business_search_repo_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.m4coding.coolhub.business.base.widgets.BusinessRefreshLayout>
+    </android.support.constraint.ConstraintLayout>
+</com.m4coding.coolhub.widgets.MultiStateView>

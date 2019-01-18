@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Powerful Layout color-->
+    <color name="powerful_default_color_separator">#DEE0E2</color>
+</resources>

@@ -1,0 +1,66 @@
+/**
+ * github的相关配置
+ */
+
+def isEmpty(CharSequence str) {
+    return str == null || str.length() == 0
+}
+
+//加载local.properties文件
+Properties localProperties = new Properties()
+try {
+    def localFile = project.rootProject.file('MyConfig/My.properties')
+    if (localFile != null && localFile.exists()) {
+        localProperties.load(localFile.newDataInputStream())
+    }
+} catch (Exception ignored) {
+    println("My.properties not found")
+}
+
+
+def myUsername = localProperties.getProperty("MY_USERNAME")
+def myPassword = localProperties.getProperty("MY_PASSWORD")
+def clientId = localProperties.getProperty("CLIENT_ID")
+def clientSecret = localProperties.getProperty("CLIENT_SECRET")
+def buglyIDDebug = localProperties.getProperty("BUGLY_ID_DEBUG")
+def buglyID = localProperties.getProperty("BUGLY_ID")
+
+
+//（取gradle.properties中的）
+
+if (isEmpty(myUsername)) {
+    myUsername = MY_USERNAME.toString()
+}
+
+if (isEmpty(myPassword)) {
+    myPassword = MY_PASSWORD.toString()
+}
+
+if (isEmpty(clientId)) {
+    clientId = CLIENT_ID.toString()
+}
+
+if (isEmpty(clientSecret)) {
+    clientSecret = CLIENT_SECRET.toString()
+}
+
+android {
+    defaultConfig {
+        buildConfigField "String", "MY_USERNAME", myUsername
+        buildConfigField "String", "MY_PASSWORD", myPassword
+        buildConfigField "String", "CLIENT_ID", clientId
+        buildConfigField "String", "CLIENT_SECRET", clientSecret
+
+        if (buglyIDDebug) {
+            buildConfigField "String", "BUGLY_ID_DEBUG",  buglyIDDebug
+        } else {
+            buildConfigField "String", "BUGLY_ID_DEBUG",  "\"\"" //没有id，定义空字符串
+        }
+
+        if (buglyID) {
+            buildConfigField "String", "BUGLY_ID",  buglyID
+        } else {
+            buildConfigField "String", "BUGLY_ID",  "\"\""
+        }
+    }
+}

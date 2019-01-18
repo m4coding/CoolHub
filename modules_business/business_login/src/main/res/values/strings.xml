@@ -1,0 +1,6 @@
+<resources>
+    <string name="business_login_title">登录</string>
+    <string name="business_login_username">请输入你的用户名</string>
+    <string name="business_login_password">请输入你的密码</string>
+    <string name="business_login_to_login">登录</string>
+</resources>

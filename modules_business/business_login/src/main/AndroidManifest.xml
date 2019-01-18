@@ -1,0 +1,5 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.m4coding.coolhub.business.login">
+    <application>
+        <activity android:name="com.m4coding.coolhub.business.login.ui.activity.LoginActivity"/>
+    </application>
+</manifest>

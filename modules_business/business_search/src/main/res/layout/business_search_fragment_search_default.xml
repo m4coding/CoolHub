@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/business_search_default_tv_history_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_30"
+        android:layout_marginLeft="@dimen/px_30"
+        android:layout_marginTop="@dimen/px_30"
+        android:gravity="center"
+        android:text="@string/business_search_search_history"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/px_text_30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/business_search_default_iv_history_delete"
+        android:layout_width="@dimen/px_40"
+        android:layout_height="@dimen/px_40"
+        android:layout_marginEnd="@dimen/px_20"
+        android:layout_marginRight="@dimen/px_20"
+        app:layout_constraintBottom_toBottomOf="@id/business_search_default_tv_history_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/business_search_default_tv_history_title"
+        app:srcCompat="@drawable/business_search_vc_ic_delete" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/business_search_fb_layout_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_20"
+        android:paddingStart="@dimen/px_20"
+        android:paddingLeft="@dimen/px_20"
+        android:paddingEnd="@dimen/px_2"
+        android:paddingRight="@dimen/px_20"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:layout_constraintStart_toStartOf="@id/business_search_default_tv_history_title"
+        app:layout_constraintTop_toBottomOf="@id/business_search_default_tv_history_title" />
+
+    <android.support.constraint.Group
+        android:id="@+id/business_search_default_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="business_search_default_tv_history_title,
+        business_search_default_iv_history_delete, business_search_default_iv_history_delete" />
+</android.support.constraint.ConstraintLayout>

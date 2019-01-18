@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m4coding.coolhub.widgets.MultiStateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/business_mainpage_repository_details_info_state_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:msv_errorView="@layout/layout_load_error"
+    app:msv_loadingView="@layout/layout_loading"
+    app:msv_viewState="loading"
+    tools:msv_viewState="content">
+
+    <com.m4coding.coolhub.business.base.widgets.BusinessRefreshLayout
+        android:id="@+id/business_base_sm_refresh_l"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_f5f5f5"
+        app:srlEnableOverScrollBounce="false"
+        app:srlEnablePreviewInEditMode="true">
+
+        <com.m4coding.coolhub.business.base.widgets.BusinessRefreshHeader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:id="@+id/business_mainpage_repo_details_info_view_nested_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/business_mainpage_repo_details_info_cl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/business_mainpage_repo_details_info_cd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_marginRight="@dimen/px_10"
+                    android:foreground="@drawable/selector_click_effect"
+                    app:cardCornerRadius="@dimen/px_12"
+                    app:cardElevation="@dimen/px_3"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/px_20"
+                        android:paddingBottom="@dimen/px_20">
+
+                        <TextView
+                            android:id="@+id/business_mainpage_repo_details_info_tv_fork_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/px_25"
+                            android:layout_marginLeft="@dimen/px_25"
+                            android:layout_marginTop="@dimen/px_15"
+                            android:textColor="@color/accent"
+                            android:textSize="@dimen/px_text_30"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Fork from xxx" />
+
+                        <TextView
+                            android:id="@+id/business_mainpage_repo_details_info_tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_15"
+                            android:textColor="@color/primary_text"
+                            android:textSize="@dimen/px_text_30"
+                            app:layout_goneMarginStart="@dimen/px_25"
+                            app:layout_constraintStart_toStartOf="@id/business_mainpage_repo_details_info_tv_fork_from"
+                            app:layout_constraintTop_toBottomOf="@id/business_mainpage_repo_details_info_tv_fork_from"
+                            tools:text="创建于20191010，最后更新于20191011" />
+
+                        <TextView
+                            android:id="@+id/business_mainpage_repo_details_info_tv_author"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_15"
+                            android:textColor="@color/primary_text"
+                            android:textSize="@dimen/px_text_30"
+                            app:layout_constraintStart_toStartOf="@id/business_mainpage_repo_details_info_tv_time"
+                            app:layout_constraintTop_toBottomOf="@id/business_mainpage_repo_details_info_tv_time"
+                            tools:text="作者：xxxx" />
+
+
+                        <TextView
+                            android:id="@+id/business_mainpage_repo_details_info_tv_language"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_15"
+                            android:textColor="@color/primary_text"
+                            android:textSize="@dimen/px_text_30"
+                            app:layout_constraintStart_toStartOf="@id/business_mainpage_repo_details_info_tv_author"
+                            app:layout_constraintTop_toBottomOf="@id/business_mainpage_repo_details_info_tv_author"
+                            tools:text="语言：Java" />
+
+                        <View
+                            android:id="@+id/business_mainpage_repo_details_info_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_1"
+                            android:layout_marginTop="@dimen/px_20"
+                            android:background="@color/divider_color"
+                            app:layout_constraintTop_toBottomOf="@id/business_mainpage_repo_details_info_tv_language" />
+
+                        <LinearLayout
+                            android:id="@+id/business_mainpage_repo_details_info_ll_starers"
+                            android:layout_width="@dimen/px_165"
+                            android:layout_height="@dimen/px_120"
+                            android:layout_marginTop="@dimen/px_20"
+                            android:background="@drawable/selector_click_effect"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toStartOf="@id/business_mainpage_repo_details_info_ll_watchers"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/business_mainpage_repo_details_info_line">
+
+                            <TextView
+                                android:id="@+id/business_mainpage_repo_details_info_tv_starers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/primary_text"
+                                android:textSize="@dimen/px_text_30"
+                                tools:text="1000万" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/px_10"
+                                android:drawableLeft="@drawable/repo_compat_vc_ic_star"
+                                android:drawablePadding="@dimen/px_4"
+                                android:gravity="center"
+                                android:text="@string/business_mainpage_starers"
+                                android:textColor="@color/primary_text"
+                                android:textSize="@dimen/px_text_30" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/business_mainpage_repo_details_info_ll_watchers"
+                            android:layout_width="@dimen/px_165"
+                            android:layout_height="@dimen/px_120"
+                            android:background="@drawable/selector_click_effect"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="@id/business_mainpage_repo_details_info_ll_starers"
+                            app:layout_constraintEnd_toStartOf="@id/business_mainpage_repo_details_info_ll_forkers"
+                            app:layout_constraintStart_toEndOf="@id/business_mainpage_repo_details_info_ll_starers"
+                            app:layout_constraintTop_toTopOf="@id/business_mainpage_repo_details_info_ll_starers">
+
+                            <TextView
+                                android:id="@+id/business_mainpage_repo_details_info_tv_watchers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/primary_text"
+                                android:textSize="@dimen/px_text_30"
+                                tools:text="1000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/px_10"
+                                android:drawableLeft="@drawable/repo_compat_vc_ic_watch"
+                                android:drawablePadding="@dimen/px_4"
+                                android:gravity="center"
+                                android:text="@string/business_mainpage_watchers"
+                                android:textColor="@color/primary_text"
+                                android:textSize="@dimen/px_text_30" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/business_mainpage_repo_details_info_ll_forkers"
+                            android:layout_width="@dimen/px_165"
+                            android:layout_height="@dimen/px_120"
+                            android:background="@drawable/selector_click_effect"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="@id/business_mainpage_repo_details_info_ll_watchers"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/business_mainpage_repo_details_info_ll_watchers"
+                            app:layout_constraintTop_toTopOf="@id/business_mainpage_repo_details_info_ll_watchers">
+
+                            <TextView
+                                android:id="@+id/business_mainpage_repo_details_info_tv_forkers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/primary_text"
+                                android:textSize="@dimen/px_text_30"
+                                tools:text="1000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/px_10"
+                                android:drawableLeft="@drawable/repo_compat_vc_ic_fork"
+                                android:drawablePadding="@dimen/px_4"
+                                android:gravity="center"
+                                android:text="@string/business_mainpage_forkers"
+                                android:textColor="@color/primary_text"
+                                android:textSize="@dimen/px_text_30" />
+                        </LinearLayout>
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <com.m4coding.coolhub.business.mainpage.modules.details.ui.view.MdScrollWebView
+                    android:id="@+id/business_mainpage_repository_details_info_web_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/px_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/business_mainpage_repo_details_info_cd"></com.m4coding.coolhub.business.mainpage.modules.details.ui.view.MdScrollWebView>
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+    </com.m4coding.coolhub.business.base.widgets.BusinessRefreshLayout>
+</com.m4coding.coolhub.widgets.MultiStateView>

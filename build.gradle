@@ -1,0 +1,55 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+buildscript {
+    ext.kotlin_version = '1.2.61'
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven{ url 'https://dl.bintray.com/tinker/maven'}
+        maven{ url 'https://dl.bintray.com/wemobiledev/maven'}
+        google()
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        //CC组件化 自动插入代码插件
+        classpath 'com.billy.android:autoregister:1.4.1'
+
+        //greendao 数据库插件
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven{ url 'https://dl.bintray.com/tinker/maven'}
+        maven{ url 'https://dl.bintray.com/wemobiledev/maven'}
+        maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+subprojects {
+    project.configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.android.support'
+                    && !details.requested.name.contains('multidex') ) {
+                //统一版本号
+                details.useVersion rootProject.ext.version["androidSupportSdkVersion"]
+            }
+        }
+    }
+}

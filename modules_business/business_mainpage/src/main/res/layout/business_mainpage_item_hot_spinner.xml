@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_80">
+    <TextView
+        android:id="@+id/business_mainpage_hot_spinner_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/px_10"
+        android:paddingLeft="@dimen/px_10"
+        android:singleLine="true"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/px_text_30"
+        android:foreground="@drawable/selector_click_effect"
+        tools:text="今天" />
+</FrameLayout>

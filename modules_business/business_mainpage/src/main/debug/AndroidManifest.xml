@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.m4coding.coolhub.business.mainpage">
+    <application
+        android:name=".test.DebugMainPageApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="首页测试"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.m4coding.coolhub.business.mainpage.test.TestMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.m4coding.coolhub.business.mainpage.MainPageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.m4coding.coolhub.business.mainpage.modules.details.ui.activity.UserDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.m4coding.coolhub.business.mainpage.modules.details.ui.activity.RepositoryListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.m4coding.coolhub.business.mainpage.modules.details.ui.activity.DataListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.m4coding.coolhub.business.mainpage.modules.details.ui.activity.RepositoryDetailsActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+</manifest>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_f5f5f5">
+
+    <fragment
+        android:id="@+id/business_mainpage_header_info_fragment"
+        android:name="com.m4coding.coolhub.business.mainpage.modules.main.ui.fragment.HeaderInfoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_90"
+        tools:layout="@layout/business_mainpage_layout_quick_header" />
+
+    <FrameLayout
+        android:id="@+id/business_mainpage_mine_cd_mine_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foreground="@drawable/selector_click_effect"
+        app:layout_constraintTop_toBottomOf="@id/business_mainpage_header_info_fragment">
+
+        <TextView
+            android:id="@+id/business_mainpage_mine_tv_info_error"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_200"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/business_base_load_error"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/px_text_35"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_200"
+            android:visibility="gone"
+            android:id="@+id/business_mainpage_mine_progress_info_loading">
+            <com.m4coding.coolhub.widgets.customloading.CircularProgressView
+                android:layout_width="@dimen/px_55"
+                android:layout_height="@dimen/px_55"
+                android:layout_gravity="center"
+                app:cpv_animAutostart="true"
+                app:cpv_indeterminate="true"
+                app:cpv_thickness="@dimen/px_4"
+                app:cpv_color="@color/accent" />
+        </FrameLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/business_mainpage_mine_cl_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/px_30">
+
+            <TextView
+                android:id="@+id/business_mainpage_mine_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/px_text_45"
+                tools:text="m4coding" />
+
+            <TextView
+                android:id="@+id/business_mainpage_mine_tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_15"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/px_text_25"
+                app:layout_constraintStart_toStartOf="@id/business_mainpage_mine_tv_name"
+                app:layout_constraintTop_toBottomOf="@id/business_mainpage_mine_tv_name"
+                tools:text="广州" />
+
+            <TextView
+                android:id="@+id/business_mainpage_mine_tv_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_15"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/px_text_25"
+                app:layout_constraintStart_toStartOf="@id/business_mainpage_mine_tv_name"
+                app:layout_constraintTop_toBottomOf="@id/business_mainpage_mine_tv_location"
+                tools:text="xxxxx@gmail.com" />
+
+            <ImageView
+                android:id="@+id/business_mainpage_mine_iv_right_arrow"
+                android:layout_width="@dimen/px_40"
+                android:layout_height="@dimen/px_40"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/vc_ic_right_arrow" />
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/business_mainpage_mine_cd_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_15"
+        android:background="@color/white"
+        android:foreground="@drawable/selector_click_effect"
+        app:layout_constraintTop_toBottomOf="@id/business_mainpage_mine_cd_mine_info">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_20"
+            android:padding="@dimen/px_30">
+
+            <ImageView
+                android:id="@+id/business_mainpage_mine_iv_setting_icon"
+                android:layout_width="@dimen/px_35"
+                android:layout_height="@dimen/px_35"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/business_mainpage_vc_ic_setting" />
+
+            <TextView
+                android:id="@+id/business_mainpage_mine_tv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_20"
+                android:text="@string/business_mainpage_mine_setting"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/px_text_30"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/business_mainpage_mine_iv_setting_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/px_25"
+                android:layout_height="@dimen/px_25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/vc_ic_right_arrow" />
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/business_mainpage_mine_cd_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_3"
+        android:background="@color/white"
+        android:foreground="@drawable/selector_click_effect"
+        app:layout_constraintTop_toBottomOf="@id/business_mainpage_mine_cd_setting">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/px_30">
+
+            <ImageView
+                android:id="@+id/business_mainpage_mine_iv_about_icon"
+                android:layout_width="@dimen/px_35"
+                android:layout_height="@dimen/px_35"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/business_mainpage_vc_ic_about" />
+
+            <TextView
+                android:id="@+id/business_mainpage_mine_tv_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_20"
+                android:text="@string/business_mainpage_mine_about"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/px_text_30"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/business_mainpage_mine_iv_about_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/px_25"
+                android:layout_height="@dimen/px_25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/vc_ic_right_arrow" />
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

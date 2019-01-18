@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/px_10"
+    android:layout_marginRight="@dimen/px_10"
+    android:foreground="@drawable/selector_click_effect"
+    app:cardCornerRadius="@dimen/px_12"
+    app:cardElevation="@dimen/px_3"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/px_20">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/business_mainpage_repository_iv_avatar"
+            android:layout_width="@dimen/px_55"
+            android:layout_height="@dimen/px_55"
+            android:layout_marginStart="@dimen/px_10"
+            android:layout_marginLeft="@dimen/px_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@color/accent" />
+
+        <TextView
+            android:id="@+id/business_mainpage_repository_tv_repo_name"
+            android:layout_width="@dimen/px_550"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_20"
+            android:layout_marginLeft="@dimen/px_20"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/px_text_30"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/business_mainpage_repository_iv_avatar"
+            app:layout_constraintStart_toEndOf="@id/business_mainpage_repository_iv_avatar"
+            app:layout_constraintTop_toTopOf="@id/business_mainpage_repository_iv_avatar"
+            tools:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+
+        <TextView
+            android:id="@+id/business_mainpage_repository_tv_describe"
+            android:layout_width="@dimen/px_600"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_15"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/px_text_25"
+            app:layout_constraintStart_toStartOf="@id/business_mainpage_repository_iv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/business_mainpage_repository_iv_avatar"
+            tools:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+
+        <TextView
+            android:id="@+id/business_mainpage_repository_tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10"
+            android:drawableStart="@drawable/shape_language_mark"
+            android:drawableLeft="@drawable/shape_language_mark"
+            android:drawablePadding="@dimen/px_6"
+            android:gravity="center"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/px_text_25"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@id/business_mainpage_repository_iv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/business_mainpage_repository_tv_describe"
+            tools:text="java" />
+
+        <TextView
+            android:id="@+id/business_mainpage_repository_tv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_25"
+            android:layout_marginLeft="@dimen/px_25"
+            android:layout_marginTop="@dimen/px_10"
+            android:drawableStart="@drawable/compat_vc_ic_star"
+            android:drawableLeft="@drawable/compat_vc_ic_star"
+            android:drawablePadding="@dimen/px_5"
+            android:gravity="center"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/px_text_25"
+            app:layout_constraintStart_toEndOf="@id/business_mainpage_repository_tv_language"
+            app:layout_constraintTop_toBottomOf="@id/business_mainpage_repository_tv_describe"
+            app:layout_goneMarginStart="0dp"
+            tools:text="200000" />
+
+        <TextView
+            android:id="@+id/business_mainpage_repository_tv_fork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_25"
+            android:layout_marginLeft="@dimen/px_25"
+            android:layout_marginTop="@dimen/px_10"
+            android:drawableStart="@drawable/compat_vc_ic_fork"
+            android:drawableLeft="@drawable/compat_vc_ic_fork"
+            android:drawablePadding="@dimen/px_5"
+            android:gravity="center"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/px_text_25"
+            app:layout_constraintStart_toEndOf="@id/business_mainpage_repository_tv_star"
+            app:layout_constraintTop_toBottomOf="@id/business_mainpage_repository_tv_describe"
+            app:layout_goneMarginStart="0dp"
+            tools:text="200000" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

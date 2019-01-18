@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="business_mainpage_main">首页</string>
+    <string name="business_mainpage_hot">热点</string>
+    <string name="business_mainpage_mine">我的</string>
+
+    <string name="business_mainpage_focus">关注</string>
+    <string name="business_mainpage_dynamic">动态</string>
+    <string name="business_mainpage_recommend">推荐</string>
+
+    <string name="business_mainpage_user_details_tab_info">资料</string>
+
+    <string name="business_mainpage_repository_details_tab_info">详情</string>
+    <string name="business_mainpage_repository_details_tab_files">文件</string>
+
+    <string name="business_mainpage_repository_details_tab_issue">问题</string>
+    <string name="business_mainpage_repository_details_tab_issue_open">打开的</string>
+    <string name="business_mainpage_repository_details_tab_issue_close">关闭的</string>
+
+
+    <string name="business_mainpage_user_details_info_location">地区：%s</string>
+    <string name="business_mainpage_user_details_info_email">邮箱：%s</string>
+    <string name="business_mainpage_star">星标</string>
+    <string name="business_mainpage_repositories">仓库</string>
+    <string name="business_mainpage_followers">粉丝</string>
+    <string name="business_mainpage_following">关注</string>
+
+    <string name="business_mainpage_watchers">Watchers</string>
+    <string name="business_mainpage_forkers">Forkers</string>
+    <string name="business_mainpage_starers">Starers</string>
+
+    <string name="business_mainpage_repo_details_update_time">创建于%1s，更新于%2s</string>
+    <string name="business_mainpage_repo_details_author">创建人：%s</string>
+    <string name="business_mainpage_repo_details_language">语言：%s</string>
+
+
+    <string name="business_mainpage_hot_all_language">全部语言</string>
+
+    <string name="business_mainpage_hot_day">每天</string>
+    <string name="business_mainpage_hot_week">每周</string>
+    <string name="business_mainpage_hot_month">每月</string>
+
+    <string name="business_mainpage_mine_setting">设置</string>
+    <string name="business_mainpage_mine_about">关于</string>
+    <string name="business_mainpage_mine_unknow">未知</string>
+
+    <string name="business_mainpage_repository_list_title">仓库列表</string>
+    <string name="business_mainpage_following_list_title">关注列表(%s)</string>
+    <string name="business_mainpage_followers_list_title">粉丝列表(%s)</string>
+
+    <string name="business_mainpage_starers_list_title">点赞列表(%s)</string>
+    <string name="business_mainpage_watchers_list_title">Watcher列表(%s)</string>
+    <string name="business_mainpage_forkers_list_title">Forker列表(%s)</string>
+    <string name="business_mainpage_issue_details_list_title">问题详情(#%s)</string>
+
+    <string name="business_mainpage_issue_details_ask">问：</string>
+    <string name="business_mainpage_issue_details_reply">回复：</string>
+
+    <string name="business_mainpage_operate_fail">操作失败</string>
+    <string name="business_mainpage_operate_success">操作成功</string>
+
+
+    <string name="business_mainpage_repo_do_star">Star</string>
+    <string name="business_mainpage_repo_do_unstar">UnStar</string>
+    <string name="business_mainpage_repo_do_watch">Watch</string>
+    <string name="business_mainpage_repo_do_unwatch">UnWatch</string>
+
+    <string name="business_mainpage_no_description">暂无描述</string>
+    <string name="business_mainpage_no_support_this_type">暂不支持此类型文件查看</string>
+
+    <string name="business_mainpage_forked_from">Forked from %s</string>
+
+    <string name="business_mainpage_no_support_release_event_look">暂不支持Release查看</string>
+    <string name="business_mainpage_no_support_push_event_look">暂不支持Push查看</string>
+    <string name="business_mainpage_login_out">退出登录</string>
+    <string name="business_mainpage_app_version">版本信息</string>
+    <string name="business_mainpage_title_setting">设置</string>
+    <string name="business_mainpage_login_out_ask">确定要退出登录吗？</string>
+
+    <string name="business_mainpage_exit_app">再按一次退出程序</string>
+    <string name="business_mainpage_about_text">Create \"CoolHub\" by m4coding</string>
+    <string name="business_mainpage_about_source">查看源码</string>
+    <string name="business_mainpage_about_star_me">点个赞</string>
+    <string name="business_mainpage_about_is_new">已是最新版本</string>
+
+
+
+    <string name="created_comment_on_commit">Created comment on commit in %s</string>
+    <string name="created_comment_on_issue">Created comment on issue %d in %s</string>
+    <string name="created_repo">Created repository %s</string>
+    <string name="forked_from">Forked %s from %s</string>
+    <string name="starred_repo">Starred %s</string>
+    <string name="push_to">Push to %s at %s</string>
+    <string name="created_tag_at">Created tag %s at %s</string>
+    <string name="created_branch_at">Created branch %s at %s</string>
+    <string name="delete_tag_at">Delete tag %s at %s</string>
+    <string name="delete_branch_at">Delete branch %s at %s</string>
+    <string name="published_release_at">Published release %s at %s</string>
+    <string name="opened_issue_at">Opened issue %d in %s</string>
+    <string name="closed_issue_at">Closed issue %d in %s</string>
+    <string name="reopened_issue_at">Reopened issue %d in %s</string>
+    <string name="edited_issue_at">Edited issue %d in %s</string>
+    <string name="assigned_issue_at">Assigned issue %d in %s</string>
+    <string name="unassigned_issue_at">Unassigned issue %d in %s</string>
+    <string name="labeled_issue_at">Labeled issue %d in %s</string>
+    <string name="unlabeled_issue_at">Unlabeled issue %d in %s</string>
+    <string name="milestoned_issue_at">Milestoned issue %d in %s</string>
+    <string name="demilestoned_issue_at">Demilestoned issue %d in %s</string>
+    <string name="added_member_to">Added member %s to %s</string>
+    <string name="deleted_member_at">Deleted member %s at %s</string>
+    <string name="edited_member_at">Edited member %s at %s</string>
+    <string name="made_repo_public">Made %s public</string>
+    <string name="org_blocked_user">Org %s blocked user %s</string>
+    <string name="org_unblocked_user">Org %s unblocked user %s</string>
+    <string name="created_pull_request_comment_at">Created pull request review comment at %s</string>
+    <string name="deleted_pull_request_comment_at">Deleted pull request review comment at %s</string>
+    <string name="edited_pull_request_comment_at">Edited pull request review comment at %s</string>
+    <string name="submitted_pull_request_review_at">Submitted pull request review at %s</string>
+    <string name="edited_pull_request_review_at">Edited pull request review at %s</string>
+    <string name="dismissed_pull_request_review_at">Dismissed pull request review at %s</string>
+</resources>

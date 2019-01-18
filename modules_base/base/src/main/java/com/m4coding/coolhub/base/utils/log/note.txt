@@ -1,0 +1,4 @@
+参考：https://github.com/ZhaoKaiQiang/KLog
+
+（1）发现的问题，即当修改过MLog的源代码文件之后，再次InstanceRun就会出现打印定位乱的问题，不过不是修改MLog的源代码
+InstanceRun就不会有定位错误的问题

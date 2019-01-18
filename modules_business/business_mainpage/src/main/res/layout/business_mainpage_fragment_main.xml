@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m4coding.coolhub.widgets.headervp.HeaderViewPager
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/business_mainpage_main_header_pager">
+    <fragment
+        android:name="com.m4coding.coolhub.business.mainpage.modules.main.ui.fragment.HeaderInfoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_90"
+        tools:layout="@layout/business_mainpage_layout_quick_header"/>
+    <com.m4coding.coolhub.widgets.powerfullayout.PowerfulFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/business_mainpage_main_top_card"
+        app:power_bottomDividerHeight="@dimen/px_3"
+        app:power_bottomDividerColor="@color/indicator_line_color">
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80"
+            android:background="@color/white"
+            android:id="@+id/business_mainpage_main_top_indicator"/>
+    </com.m4coding.coolhub.widgets.powerfullayout.PowerfulFrameLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/business_mainpage_main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</com.m4coding.coolhub.widgets.headervp.HeaderViewPager>

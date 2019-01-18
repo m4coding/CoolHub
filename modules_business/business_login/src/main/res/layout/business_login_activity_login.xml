@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.m4coding.coolhub.widgets.roundlayout.RoundEditText
+        android:id="@+id/business_login_et_username"
+        android:layout_width="@dimen/px_600"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_50"
+        android:background="@null"
+        android:gravity="left|center_vertical"
+        android:hint="@string/business_login_username"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/px_50"
+        android:paddingTop="@dimen/px_20"
+        android:paddingRight="@dimen/px_50"
+        android:paddingBottom="@dimen/px_20"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="@dimen/px_text_33"
+        app:bgRadius="@dimen/px_100"
+        app:bgStrokeColor="@color/divider_color"
+        app:bgStrokeWidth="@dimen/px_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.m4coding.coolhub.widgets.roundlayout.RoundRelativeLayout
+        android:layout_width="@dimen/px_600"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/px_50"
+        android:paddingTop="@dimen/px_20"
+        android:paddingRight="@dimen/px_50"
+        android:paddingBottom="@dimen/px_20"
+        android:id="@+id/business_login_rr_password"
+        app:bgRadius="@dimen/px_100"
+        app:bgStrokeColor="@color/divider_color"
+        app:bgStrokeWidth="@dimen/px_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/business_login_et_username">
+
+        <EditText
+            android:id="@+id/business_login_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawablePadding="@dimen/px_10"
+            android:gravity="left|center_vertical"
+            android:hint="@string/business_login_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/px_text_33" />
+
+        <ImageView
+            android:id="@+id/business_login_iv_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/vc_ic_eye_close" />
+    </com.m4coding.coolhub.widgets.roundlayout.RoundRelativeLayout>
+
+    <Button
+        android:layout_width="@dimen/px_600"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_60"
+        android:paddingTop="@dimen/px_20"
+        android:paddingBottom="@dimen/px_20"
+        android:id="@+id/business_login_bt_login"
+        android:textSize="@dimen/px_text_35"
+        android:text="@string/business_login_to_login"
+        android:gravity="center"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/business_login_rr_password" />
+</android.support.constraint.ConstraintLayout>

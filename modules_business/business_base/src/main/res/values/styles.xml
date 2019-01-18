@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ToolBar点击效果-->
+    <style name="tool_bar_click_effect">
+        <item name="android:background">@drawable/selector_toolbar_click_effect</item>
+    </style>
+
+</resources>

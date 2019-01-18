@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主题颜色-->
+    <color name="primary">#F44336</color>
+    <color name="primary_dark">#F44336</color>
+    <color name="primary_light">#FFCDD2</color>
+    <color name="accent">#FF5252</color>
+    <color name="accent_dark">#FF5252</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="bar_title_color">#FFFFFF</color>
+    <color name="divider_color">#BDBDBD</color>
+    <color name="indicator_line_color">#F6F6F6</color>
+
+    <color name="common_f5f5f5">#f5f5f5</color>
+    <color name="common_e5e5e5">#e5e5e5</color>
+    <color name="common_333333">#333333</color>
+    <color name="common_999999">#999999</color>
+    <color name="text_black">@android:color/black</color>
+    <color name="text_gray">#999999</color>
+
+</resources>

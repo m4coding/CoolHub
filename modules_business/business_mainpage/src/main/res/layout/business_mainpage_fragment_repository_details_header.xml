@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_360"
+    android:paddingTop="@dimen/px_90"
+    android:paddingLeft="@dimen/px_13"
+    tools:background="@color/black_30">
+
+    <TextView
+        android:id="@+id/business_mainpage_repository_details_header_tv_name"
+        android:layout_width="@dimen/px_600"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_25"
+        android:layout_marginStart="@dimen/px_25"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_text_45"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/business_mainpage_repository_details_header_tv_introduce"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="仓库名称" />
+
+    <TextView
+        android:id="@+id/business_mainpage_repository_details_header_tv_introduce"
+        android:layout_width="@dimen/px_600"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_text_25"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/business_mainpage_repository_details_header_tv_name"
+        app:layout_constraintTop_toBottomOf="@id/business_mainpage_repository_details_header_tv_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="仓库介绍" />
+</android.support.constraint.ConstraintLayout>

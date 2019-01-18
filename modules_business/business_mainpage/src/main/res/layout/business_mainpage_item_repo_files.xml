@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:foreground="@drawable/selector_click_effect">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/px_30"
+        android:paddingBottom="@dimen/px_30"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/business_mainpage_repo_files_iv_icon"
+            android:layout_marginLeft="@dimen/px_30"
+            tools:src="@drawable/business_mainpage_vc_ic_file" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/px_text_30"
+            android:layout_marginLeft="@dimen/px_30"
+            android:id="@+id/business_mainpage_repo_files_tv_name"
+            tools:text="text"/>
+    </LinearLayout>
+</FrameLayout>

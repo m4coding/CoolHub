@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.m4coding.business_base" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
+    <application>
+        <!-- AutoSize 屏幕UI适配 （今日头条方案） (以iphone6为标准 375 x 1334px  375 x 667dp)-->
+        <!-- android普通机型为360x640dp  即720x1280px 或 1080x1920px-->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640"/>
+
+        <!--基本业务全局配置-->
+        <meta-data android:name="com.m4coding.coolhub.business.base.config.BusinessBaseGlobalConfig"
+            android:value="ConfigModule"/>
+    </application>
+
+</manifest>

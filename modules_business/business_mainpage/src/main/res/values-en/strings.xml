@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="business_mainpage_main">Main</string>
+    <string name="business_mainpage_hot">Hot</string>
+    <string name="business_mainpage_mine">Mine</string>
+
+    <string name="business_mainpage_focus">focus</string>
+    <string name="business_mainpage_dynamic">dynamic</string>
+    <string name="business_mainpage_recommend">recommend</string>
+
+    <string name="business_mainpage_user_details_tab_info">info</string>
+
+    <string name="business_mainpage_repository_details_tab_info">detail</string>
+    <string name="business_mainpage_repository_details_tab_files">files</string>
+
+    <string name="business_mainpage_repository_details_tab_issue">issue</string>
+    <string name="business_mainpage_repository_details_tab_issue_open">opened</string>
+    <string name="business_mainpage_repository_details_tab_issue_close">closed</string>
+
+    <string name="business_mainpage_user_details_info_location">Location：%s</string>
+    <string name="business_mainpage_user_details_info_email">Email：%s</string>
+    <string name="business_mainpage_star">Star</string>
+    <string name="business_mainpage_repositories">Repositories</string>
+    <string name="business_mainpage_followers">Followers</string>
+    <string name="business_mainpage_following">Following</string>
+
+    <string name="business_mainpage_watchers">Watchers</string>
+    <string name="business_mainpage_forkers">Forkers</string>
+    <string name="business_mainpage_starers">Starers</string>
+
+    <string name="business_mainpage_repo_details_update_time">Created at %1s, Updated at %2s</string>
+    <string name="business_mainpage_repo_details_author">Author: %s</string>
+    <string name="business_mainpage_repo_details_language">Language: %s</string>
+
+    <string name="business_mainpage_operate_fail">operation failure</string>
+    <string name="business_mainpage_operate_success">operation success</string>
+
+    <string name="business_mainpage_hot_all_language">All</string>
+
+    <string name="business_mainpage_hot_day">Day</string>
+    <string name="business_mainpage_hot_week">Week</string>
+    <string name="business_mainpage_hot_month">Month</string>
+
+    <string name="business_mainpage_mine_setting">setting</string>
+    <string name="business_mainpage_mine_about">about</string>
+    <string name="business_mainpage_mine_unknow">unknown</string>
+
+    <string name="business_mainpage_repository_list_title">RepositoryList</string>
+    <string name="business_mainpage_following_list_title">FollowingList(%s)</string>
+    <string name="business_mainpage_followers_list_title">FollowersList(%s)</string>
+
+    <string name="business_mainpage_starers_list_title">StarersList(%s)</string>
+    <string name="business_mainpage_watchers_list_title">WatchersList(%s)</string>
+    <string name="business_mainpage_forkers_list_title">ForkersList(%s)</string>
+    <string name="business_mainpage_issue_details_list_title">IssueDetails(#%s)</string>
+
+    <string name="business_mainpage_issue_details_ask">ask：</string>
+    <string name="business_mainpage_issue_details_reply">reply：</string>
+
+    <string name="business_mainpage_no_description">No description provided.</string>
+
+    <string name="business_mainpage_no_support_this_type">This type of file viewing is not supported</string>
+
+    <string name="business_mainpage_forked_from">Forked from %s</string>
+
+    <string name="business_mainpage_no_support_release_event_look">Release view is not supported yet</string>
+    <string name="business_mainpage_no_support_push_event_look">Push view is not supported yet</string>
+    <string name="business_mainpage_login_out">Login Out</string>
+    <string name="business_mainpage_app_version">Version Information</string>
+    <string name="business_mainpage_title_setting">Setting</string>
+    <string name="business_mainpage_login_out_ask">Are you sure you want to log out?</string>
+
+    <string name="business_mainpage_exit_app">"Press exit again"</string>
+    <string name="business_mainpage_about_text">Create \"CoolHub\" by m4coding</string>
+    <string name="business_mainpage_about_source">Source Code</string>
+    <string name="business_mainpage_about_star_me">Star Me</string>
+    <string name="business_mainpage_about_is_new">It is the latest version</string>
+
+
+
+</resources>

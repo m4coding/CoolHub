@@ -1,0 +1,38 @@
+
+private static def getBaseModulesPath(String name) {
+    return 'modules_base/' + name
+}
+
+private static def getBusinessModulesPath(String name) {
+    return 'modules_business/' + name
+}
+
+//基础模块
+include ':base'
+project(':base').projectDir = new File(getBaseModulesPath('base'))
+
+include ':api'
+project(':api').projectDir = new File(getBaseModulesPath('api'))
+
+include ':widgets'
+project(':widgets').projectDir = new File(getBaseModulesPath('widgets'))
+
+
+//业务模块
+include ':app'
+project(':app').projectDir = new File('app')
+
+include ':business_base'
+project(':business_base').projectDir = new File(getBusinessModulesPath('business_base'))
+
+include ':business_start'
+project(':business_start').projectDir = new File(getBusinessModulesPath('business_start'))
+
+include ':business_login'
+project(':business_login').projectDir = new File(getBusinessModulesPath('business_login'))
+
+include ':business_mainpage'
+project(':business_mainpage').projectDir = new File(getBusinessModulesPath('business_mainpage'))
+
+include ':business_search'
+project(':business_search').projectDir = new File(getBusinessModulesPath('business_search'))

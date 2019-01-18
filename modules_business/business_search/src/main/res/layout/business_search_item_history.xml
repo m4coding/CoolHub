@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m4coding.coolhub.widgets.BorderTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/business_search_default_tv_history_content"
+    android:gravity="center"
+    android:textSize="@dimen/px_text_25"
+    android:paddingLeft="@dimen/px_20"
+    android:paddingRight="@dimen/px_20"
+    android:paddingTop="@dimen/px_5"
+    android:paddingBottom="@dimen/px_5"
+    android:layout_margin="@dimen/px_10"
+    android:textColor="@color/primary_text"
+    app:textSolidColor="@color/common_f5f5f5"
+    app:textRadius="@dimen/px_100"
+    tools:text="android"/>

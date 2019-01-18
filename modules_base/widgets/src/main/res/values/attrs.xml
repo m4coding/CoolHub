@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewSizeCalculate">
+        <attr name="widthRatio" format="float"/>
+        <attr name="heightRatio" format="float"/>
+        <attr name="datumRatio" format="enum" >
+            <enum name="datumWidth" value="1" />
+            <enum name="datumHeight" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RoundAngle">
+        <attr name="bgSolidColor" format="color" />
+        <attr name="bgStrokeColor" format="color" />
+        <attr name="bgRadius" format="dimension" />
+        <attr name="bgLeftTopRadius" format="dimension" />
+        <attr name="bgLeftBottomRadius" format="dimension" />
+        <attr name="bgRightTopRadius" format="dimension" />
+        <attr name="bgRightBottomRadius" format="dimension" />
+        <attr name="bgStrokeWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="borderTextView">
+        <attr name="textSolidColor" format="color" />
+        <attr name="textStrokeColor" format="color" />
+        <attr name="textRadius" format="dimension" />
+        <attr name="textLeftTopRadius" format="dimension" />
+        <attr name="textLeftBottomRadius" format="dimension" />
+        <attr name="textRightTopRadius" format="dimension" />
+        <attr name="textRightBottomRadius" format="dimension" />
+        <attr name="textStrokeWidth" format="dimension" />
+        <attr name="textDrawable" format="reference" />
+        <attr name="textNormalTextColor" format="color" />
+        <attr name="textSelectedTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiStateView">
+        <attr name="msv_loadingView" format="reference" />
+        <attr name="msv_emptyView" format="reference" />
+        <attr name="msv_errorView" format="reference" />
+        <attr name="msv_viewState" format="enum">
+            <enum name="content" value="0" />
+            <enum name="error" value="1" />
+            <enum name="empty" value="2" />
+            <enum name="loading" value="3" />
+        </attr>
+        <attr name="msv_animateViewChanges" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressView">
+        <attr name="cpv_progress" format="float" />
+        <attr name="cpv_maxProgress" format="float" />
+        <attr name="cpv_animDuration" format="integer" />
+        <attr name="cpv_animSwoopDuration" format="integer" />
+        <attr name="cpv_animSyncDuration" format="integer" />
+        <attr name="cpv_color" format="color"/>
+        <attr name="cpv_thickness" format="dimension"/>
+        <attr name="cpv_indeterminate" format="boolean" />
+        <attr name="cpv_animAutostart" format="boolean" />
+        <attr name="cpv_animSteps" format="integer" />
+        <attr name="cpv_startAngle" format="float" />
+    </declare-styleable>
+
+
+    <!-- PowerfulLayout xml配置项-->
+    <declare-styleable name="PowerfulLayout">
+        <!-- 最大宽高、最小宽高设置-->
+        <attr name="android:maxWidth"/>
+        <attr name="android:maxHeight"/>
+        <attr name="android:minWidth"/>
+        <attr name="android:minHeight"/>
+        <!-- 分割线设置 bottom top left right  Inset表示内凹的距离-->
+        <attr name="power_bottomDividerHeight" format="dimension"/>
+        <attr name="power_bottomDividerColor" format="color|reference"/>
+        <attr name="power_bottomDividerInsetLeft" format="dimension"/>
+        <attr name="power_bottomDividerInsetRight" format="dimension"/>
+        <attr name="power_topDividerHeight" format="dimension"/>
+        <attr name="power_topDividerColor" format="color|reference"/>
+        <attr name="power_topDividerInsetLeft" format="dimension"/>
+        <attr name="power_topDividerInsetRight" format="dimension"/>
+        <attr name="power_leftDividerWidth" format="dimension"/>
+        <attr name="power_leftDividerColor" format="color|reference"/>
+        <attr name="power_leftDividerInsetTop" format="dimension"/>
+        <attr name="power_leftDividerInsetBottom" format="dimension"/>
+        <attr name="power_rightDividerWidth" format="dimension"/>
+        <attr name="power_rightDividerColor" format="color|reference"/>
+        <attr name="power_rightDividerInsetTop" format="dimension"/>
+        <attr name="power_rightDividerInsetBottom" format="dimension"/>
+        <!-- 圆角大小设置-->
+        <attr name="power_radius"/>
+        <!-- 边框颜色设置-->
+        <attr name="power_borderColor"/>
+        <!-- 边框大小设置-->
+        <attr name="power_borderWidth"/>
+        <!-- 外套的颜色 （主要用于实现圆角，当然也可以设置其他颜色）针对5.0以下手机-->
+        <attr name="power_outerNormalColor" format="color|reference"/>
+        <attr name="power_hideRadiusSide" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="bottom" value="3"/>
+            <enum name="left" value="4"/>
+        </attr>
+        <!-- 是否只在5.0系统之前显示边框-->
+        <attr name="power_showBorderOnlyBeforeL" format="boolean"/>
+        <!-- 设置阴影大小 （只支持5.0以上系统）-->
+        <attr name="power_shadowElevation" format="dimension"/>
+        <!-- 阴影不透明度设置-->
+        <attr name="power_shadowAlpha" format="float"/>
+        <!-- 轮廓内凹设置-->
+        <attr name="power_outlineInsetTop" format="dimension"/>
+        <attr name="power_outlineInsetLeft" format="dimension"/>
+        <attr name="power_outlineInsetRight" format="dimension"/>
+        <attr name="power_outlineInsetBottom" format="dimension"/>
+        <attr name="power_outlineExcludePadding" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="HeaderViewPager">
+        <attr name="hvp_topOffset" format="dimension" />
+    </declare-styleable>
+
+</resources>

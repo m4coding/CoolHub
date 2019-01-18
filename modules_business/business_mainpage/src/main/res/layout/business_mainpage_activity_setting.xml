@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.m4coding.coolhub.widgets.MultiStateView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/business_mainpage_setting_state_view"
+    app:msv_errorView="@layout/layout_load_error"
+    app:msv_loadingView="@layout/layout_loading"
+    app:msv_viewState="loading"
+    tools:msv_viewState="content">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_e5e5e5"
+        android:id="@+id/business_mainpage_setting_recyclerview"/>
+</com.m4coding.coolhub.widgets.MultiStateView>

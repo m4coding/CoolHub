@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_80">
+
+    <ImageView
+        android:id="@+id/business_search_hint_iv_icon"
+        android:layout_width="@dimen/px_35"
+        android:layout_height="@dimen/px_35"
+        android:layout_marginStart="@dimen/px_20"
+        android:layout_marginLeft="@dimen/px_20"
+        app:layout_constraintBottom_toBottomOf="@id/business_search_hint_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vc_ic_search" />
+
+    <TextView
+        android:id="@+id/business_search_hint_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_20"
+        android:layout_marginLeft="@dimen/px_20"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/px_text_30"
+        app:layout_constraintBottom_toBottomOf="@id/business_search_hint_iv_icon"
+        app:layout_constraintStart_toEndOf="@id/business_search_hint_iv_icon"
+        app:layout_constraintTop_toTopOf="@id/business_search_hint_iv_icon"
+        tools:text="搜索历史提示" />
+
+    <View
+        android:id="@+id/business_search_hint_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:background="@color/divider_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/business_search_hint_iv_icon" />
+</android.support.constraint.ConstraintLayout>

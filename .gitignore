@@ -1,0 +1,10 @@
+*.iml
+.gradle
+/local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/MyConfig/
+/.idea/
+/.idea/caches/build_file_checksums.ser
