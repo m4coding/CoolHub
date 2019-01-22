@@ -1,6 +1,7 @@
 package com.m4coding.coolhub
 
 import com.m4coding.coolhub.api.BuildConfig
+import com.m4coding.coolhub.api.exception.NetExceptionHelper
 import com.m4coding.coolhub.base.base.BaseApplication
 import com.m4coding.coolhub.base.utils.log.MLog
 import com.m4coding.coolhub.business.base.utils.CrashHandler
@@ -9,6 +10,7 @@ import com.m4coding.coolhub.business.login.ui.activity.LoginActivity
 import com.m4coding.coolhub.business.mainpage.MainPageActivity
 import com.tencent.bugly.Bugly
 import com.tencent.bugly.beta.Beta
+import io.reactivex.plugins.RxJavaPlugins
 
 /**
  * @author mochangsheng
@@ -22,6 +24,7 @@ class CoolHubApplication : BaseApplication() {
         //注册异常捕获
         CrashHandler.getInstance().init()
         initBugly()
+        initRxjavaPlugins()
         PhoneInformationManager.getInstance().init(this)
     }
 
@@ -43,4 +46,11 @@ class CoolHubApplication : BaseApplication() {
             Beta.canShowUpgradeActs.add(LoginActivity::class.java)
         }
     }
+
+    private fun initRxjavaPlugins() {
+        RxJavaPlugins.setErrorHandler {
+            NetExceptionHelper.wrapException(it)
+        }
+    }
+
 }

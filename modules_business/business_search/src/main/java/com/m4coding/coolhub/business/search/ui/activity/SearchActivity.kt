@@ -2,21 +2,17 @@ package com.m4coding.coolhub.business.search.ui.activity
 
 import android.content.ComponentName
 import android.content.Context
-import android.content.Intent
-import android.support.v4.app.Fragment
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.EditText
-import android.widget.TextView
 import com.m4coding.coolhub.base.base.BasePresenterActivity
 import com.m4coding.coolhub.base.base.IFragmentKeyListener
 import com.m4coding.coolhub.base.utils.ToastUtils
 import com.m4coding.coolhub.base.utils.ViewUtils
-import com.m4coding.coolhub.base.utils.ViewUtils.handleSoftInput
+import com.m4coding.coolhub.business.base.component.ComponentUtils
 import com.m4coding.coolhub.business.search.misc.SearchDBManager
 import com.m4coding.coolhub.business.search.misc.SearchEvent
 import com.m4coding.coolhub.business.search.model.bean.SearchBean
@@ -36,14 +32,13 @@ class SearchActivity : BasePresenterActivity<SearchPresenter>(), View.OnClickLis
     private lateinit var mHintFragment: SearchHintFragment
     private var mIsHistorySearch: Boolean = false
 
-
     companion object {
         const val FRAGMENT_TYPE_DEFAULT = "default"
         const val FRAGMENT_TYPE_CONTENT = "content"
         const val FRAGMENT_TYPE_HINT = "hint"
 
         fun newInstance(context: Context) {
-            val intent = Intent()
+            val intent = ComponentUtils.getIntent(context)
             intent.component = ComponentName(context, SearchActivity::class.java)
             context.startActivity(intent)
         }
