@@ -18,10 +18,8 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        release {
-            //打release包时关闭模拟器支持
-            IS_SIMULATOR = false
 
+        release {
             //混淆
             minifyEnabled false
             //Zipalign优化
@@ -68,3 +66,4 @@ dependencies {
 }
 
 apply from: rootProject.file('simulator-config.gradle')
+
