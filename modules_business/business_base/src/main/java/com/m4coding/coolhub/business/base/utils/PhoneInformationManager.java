@@ -4,15 +4,13 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import android.util.DisplayMetrics;
-
 import com.m4coding.coolhub.base.utils.DeviceUtils;
-
+import com.m4coding.coolhub.base.utils.ShellUtils;
+import com.m4coding.coolhub.base.utils.channel.ChannelUtil;
 import java.util.HashMap;
 import java.util.UUID;
-
 import io.reactivex.Observable;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -57,17 +55,18 @@ public class PhoneInformationManager {
     }
 
     @SuppressLint("CheckResult")
-    public void init(Context context) {
-        Observable.just(context).observeOn(Schedulers.newThread())
-                .subscribe(new Consumer<Context>() {
+    public Observable<Context> init(Context context) {
+        return Observable.just(context).subscribeOn(Schedulers.newThread())
+                .map(new Function<Context, Context>() {
                     @Override
-                    public void accept(@NonNull Context context) throws Exception {
+                    public Context apply(Context context) throws Exception {
                         setupUdid(context);
                         setupAppVersion(context);
                         setupFrom(context);
                         setupNetType(context);
                         setupOs(context);
                         setupScreen(context);
+                        return context;
                     }
                 });
     }
@@ -82,7 +81,7 @@ public class PhoneInformationManager {
 
     //渠道信息
     private void setupFrom(Context context) {
-
+        mMap.put(KEY_FROM, ChannelUtil.getChannel(context, "default"));
     }
 
     //配置系统版本
@@ -108,12 +107,26 @@ public class PhoneInformationManager {
 
     //屏幕宽、高
     private void setupScreen(Context context) {
-        DisplayMetrics displayMetrics = DeviceUtils.getDisplayMetrics(context);
-        if (displayMetrics != null) {
-            mScreenWidth = displayMetrics.widthPixels;
-            mScreenHeight = displayMetrics.heightPixels;
+        //调整屏幕分辨率的获取，避免常规方式获取有问题（有虚拟导航栏的手机就会获取不准确）
+        try {
+            ShellUtils.CommandResult commandResult = ShellUtils.execCmd("wm size", false);
+            if (commandResult.result == 0) {
+                String[] strs = commandResult.successMsg.split(" ");
+                mMap.put(KEY_SCREEN, strs[strs.length - 1]);
+                String[] temp = strs[strs.length - 1].split("x");
+                mScreenWidth = Integer.parseInt(temp[0]);
+                mScreenHeight = Integer.parseInt(temp[1]);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            DisplayMetrics displayMetrics = DeviceUtils.getDisplayMetrics(context);
+            if (displayMetrics != null) {
+                mScreenWidth = displayMetrics.widthPixels;
+                mScreenHeight = displayMetrics.heightPixels;
+            }
+            mMap.put(KEY_SCREEN, mScreenWidth + "x" + mScreenHeight);
         }
-        mMap.put(KEY_SCREEN, mScreenWidth + "x" + mScreenHeight);
     }
 
     //配置设备唯一id
