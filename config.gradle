@@ -4,7 +4,7 @@ ext {
                compileSdkVersion       : 28,
                buildToolsVersion       : "28.0.2",
                minSdkVersion           : 16,
-               targetSdkVersion        : 25,
+               targetSdkVersion        : 26,
                appVersionCode             : 3,
                appVersionName             : "v1.0.2",
     ]
