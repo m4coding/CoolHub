@@ -81,7 +81,7 @@ public class PhoneInformationManager {
 
     //渠道信息
     private void setupFrom(Context context) {
-        mMap.put(KEY_FROM, ChannelUtil.getChannel(context, "default"));
+        mMap.put(KEY_FROM, ChannelUtil.getChannel(context, "Default"));
     }
 
     //配置系统版本
