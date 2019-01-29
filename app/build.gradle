@@ -17,17 +17,9 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
 
+    buildTypes {
         release {
-            //混淆
-            minifyEnabled false
-            //Zipalign优化
-            zipAlignEnabled true
-            //移除无用的resource文件
-            shrinkResources false
-            //proguard-android.txt是的系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个proguard-rules.pro文件是自己的定义混淆文件
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -67,3 +59,7 @@ dependencies {
 
 apply from: rootProject.file('simulator-config.gradle')
 
+def signFile = rootProject.file('MyConfig/sign-config.gradle')
+if (signFile != null && signFile.exists()) {
+    apply from: rootProject.file('MyConfig/sign-config.gradle')
+}
