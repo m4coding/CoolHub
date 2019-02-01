@@ -4,6 +4,10 @@
 
 开源的Github Android客户端，基于Kotlin，组件化开发
 
+[![Google Play](https://github.com/m4coding/CoolHub/blob/master/app_art/google_play.png)](https://play.google.com/store/apps/details?id=com.m4coding.coolhub)
+
+[前往Google Play安装CoolHub](https://play.google.com/store/apps/details?id=com.m4coding.coolhub)
+
 ## 功能
 
 * 支持根据个人兴趣推荐仓库

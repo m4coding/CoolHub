@@ -4,6 +4,10 @@
 
 Open source Github Android client, based on Kotlin, componentized development
 
+[![Google Play](https://github.com/m4coding/CoolHub/blob/master/app_art/google_play.png)](https://play.google.com/store/apps/details?id=com.m4coding.coolhub)
+
+[Go To Google Play Install CoolHub](https://play.google.com/store/apps/details?id=com.m4coding.coolhub)
+
 ## function
 
 * supports the recommendation of repository based on personal interests
