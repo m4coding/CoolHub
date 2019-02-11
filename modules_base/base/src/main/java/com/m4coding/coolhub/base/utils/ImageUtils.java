@@ -10,6 +10,7 @@ import android.graphics.PorterDuffColorFilter;
 import android.os.Build;
 import android.renderscript.Allocation;
 import android.renderscript.Element;
+import android.renderscript.RSInvalidStateException;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.support.annotation.FloatRange;
@@ -130,6 +131,10 @@ public final class ImageUtils {
             blurScript.setRadius(radius);
             blurScript.forEach(output);
             output.copyTo(ret);
+        } catch (RSInvalidStateException e){
+            //捕捉异常，避免Bad bitmap type: RGBA_F16  在三星 SM N9600 android9.0出现过
+            e.printStackTrace();
+            ret = stackBlur(src, (int) radius, recycle);
         } finally {
             if (rs != null) {
                 rs.destroy();
