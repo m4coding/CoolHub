@@ -30,7 +30,7 @@ class StartActivity : BasePresenterActivity<StartPresenter>(), StartContract.Vie
     override fun initData() {
         val rxPermission = RxPermissions(this)
         rxPermission
-                .requestEach(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE)
+                .requestEachCombined(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE)  //requestEach与requestEachCombined区别要注意
                 .compose(RxLifecycleUtils.bindToLifecycle(this, ActivityEvent.DESTROY))
                 .subscribe{
                     when {
