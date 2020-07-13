@@ -1,4 +1,5 @@
 import java.util.regex.Pattern
+import org.gradle.util.GradleVersion
 
 //先加载local.properties文件
 Properties localProperties = new Properties()
@@ -38,7 +39,8 @@ ext.addComponent = { dependencyName, realDependency = null ->
     def app = 'true' == localProperties.getProperty(dependencyName)
     //当依赖的module不是app时，才去添加依赖
     if (!app) {
-        def dependencyMode = (project.gradle.gradleVersion as float) >= 4.1F ? 'api' : 'compile'
+        def dependencyMode = GradleVersion.version(project.gradle.gradleVersion) >= GradleVersion.version('4.1') ? 'api' : 'compile'
+//        def dependencyMode = (project.gradle.gradleVersion as float) >= 4.1F ? 'api' : 'compile'
         if (realDependency) {
             //通过参数传递的依赖方式，如：
             // project(':moduleName')
@@ -70,6 +72,9 @@ repositories {
 
 //默认配置了AndroidManifest.xml在library模式和application模式下的文件路径
 android {
+
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
     sourceSets {
         main {
             //默认的作为application运行时Manifest文件路径
@@ -102,7 +107,8 @@ android {
         }
     }
 }
-def dependencyMode = (project.gradle.gradleVersion as float) >= 4.1F ? 'api' : 'compile'
+def dependencyMode = GradleVersion.version(project.gradle.gradleVersion) >= GradleVersion.version('4.1') ? 'api' : 'compile'
+//def dependencyMode = (project.gradle.gradleVersion as float) >= 4.1F ? 'api' : 'compile'
 //project.dependencies.add(dependencyMode, project(":cc"))
 project.dependencies.add(dependencyMode, "com.billy.android:cc:1.1.0")
 
